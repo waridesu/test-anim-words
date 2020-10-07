@@ -9,8 +9,8 @@ const MyCard = props => {
         else setDone(done = false);
     }
     return <div onClick={handleCardClick}
-                className={cl(s.wordWrap, {[s.anim]: done === true}, {[s.rev]: done === false})}>
-        {done ? <div className={s.true}>{props.rus}</div> : <div className={s.false}>{props.eng}</div>}
+                className={s.wordWrap}>
+        {done ? <div className={cl({[s.true]: done,[s.anim]: done === true})}>{props.rus}</div> : <div className={cl({[s.false]: !done,[s.anim]: done === false})}>{props.eng}</div>}
     </div>
 }
 export default MyCard;

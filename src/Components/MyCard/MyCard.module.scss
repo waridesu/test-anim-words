@@ -1,0 +1,43 @@
+.wordWrap {
+  margin: 10px;
+  width: 170px;
+  text-align: center;
+  cursor: pointer;
+  &.anim{
+    animation: rotate 2s;
+    @keyframes rotate {
+      from {
+        transform: rotateY(180deg);
+
+        to {
+          transform: rotateY(-180deg);
+        }
+      }
+    }
+    .true {
+      background-color: #1BB95E;
+      color: #fff;
+      border-color: aqua;
+    }
+
+  }
+  &.rev{
+    animation: unrotate 2s;
+    @keyframes unrotate {
+      from {
+        transform: rotateY(180deg);
+
+        to {
+          transform: rotateY(-180deg);
+        }
+      }
+    }
+  }
+}
+
+.true,
+.false {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid green;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import s from './HeaderBlock.module.scss'
 
 const MyHeaderBlock = props => {
-    const backColor = props.col && {backgroundColor: 'green', width: '100%', margin: 'auto'}
+    const backColor = props.col && {backgroundColor: 'green', width: '100%', margin: 'auto', textAlign: 'center'}
     const Color = (props.col || props.cel) && {
         color: 'white',
         textDecoration: 'none',
